@@ -1,12 +1,14 @@
 # Survival analysis of LUAD data from TGCA
 
-Raw data:
+## Raw data
 
 * ~500 samples
 
 * ~20000 genes
 
-Raw expression features:
+* ~100 clinical features
+
+## Raw expression features:
 
 * gene-level
 
@@ -14,7 +16,7 @@ Raw expression features:
 
 * log2(x+1) transformed
 
-Raw survival features:
+## Raw survival features:
 
 * event_col: 'OS'
 
@@ -22,6 +24,8 @@ Raw survival features:
 
 * censoring rate: ~64%
 
+## Analysis notes
 
+So far I've fitting a CoxnetSurvivalAnalysis model using engineerd clinical features and PCA transformed expression features. Since the dataset is so small I have not used a holdout set for evaluation but instead used the average of the validatation results from cross-valiation as an estimate of model performance. For the next step I am planning to fit a SurvivalTree model.
 
 
