@@ -26,6 +26,12 @@
 
 ## Analysis notes
 
-So far I've fitting a CoxnetSurvivalAnalysis model using engineerd clinical features and PCA transformed expression features. Since the dataset is so small I have not used a holdout set for evaluation but instead used the average of the validatation results from cross-valiation as an estimate of model performance. For the next step I am planning to fit a SurvivalTree model.
+So far I've fitting a CoxnetSurvivalAnalysis model using engineerd clinical features and PCA transformed expression features. Since the dataset is so small I have not used a holdout set for evaluation but instead used the average of the validatation results from cross-valiation as an estimate of model performance. 
+
+Next steps:
+
+* Try SurvivalTree, GradientBoostingSurvivalAnalysis, ComponentwiseGradientBoostingSurvivalAnalysis
+
+* look for an alternative TCGA LUAD data set to use for external validation 
 
 
