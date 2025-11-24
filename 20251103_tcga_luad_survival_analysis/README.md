@@ -1,4 +1,4 @@
-# Survival analysis of LUAD data from TGCA
+# Survival analysis of lung adenocarcinoma (LUAD) data from TCGA
 
 ## Raw data
 
@@ -26,12 +26,14 @@
 
 ## Analysis notes
 
-So far I've fitting a CoxnetSurvivalAnalysis model using engineerd clinical features and PCA transformed expression features. Since the dataset is so small I have not used a holdout set for evaluation but instead used the average of the validatation results from cross-valiation as an estimate of model performance. 
+So far I've fitted a CoxnetSurvivalAnalysis model using engineerd clinical features and PCA-transformed expression features. Since the dataset is very small I have not used an independent holdout set for evaluation, but instead used the average valiation set C-index from cross-valiation as an estimate of model performance. 
 
 Next steps:
 
-* Try SurvivalTree, GradientBoostingSurvivalAnalysis, ComponentwiseGradientBoostingSurvivalAnalysis
+* try SurvivalTree, GradientBoostingSurvivalAnalysis
 
 * look for an alternative TCGA LUAD data set to use for external validation 
+
+* try graph-based extraction of co-expressed genes using kNN + Leiden/Louvain
 
 
