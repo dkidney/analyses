@@ -26,7 +26,7 @@
 
 ## Analysis notes
 
-So far I've fitted a CoxnetSurvivalAnalysis model using engineerd clinical features and PCA-transformed expression features. Since the dataset is very small I have not used an independent holdout set for evaluation, but instead used the average valiation set C-index from cross-valiation as an estimate of model performance. 
+So far I've fitted a CoxnetSurvivalAnalysis model using engineered clinical features and PCA-transformed expression features. Since the dataset is very small I have not used an independent holdout set for evaluation, but instead used the average valiation set C-index from cross-valiation as an estimate of model performance. 
 
 Next steps:
 
