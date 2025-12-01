@@ -34,9 +34,17 @@ Survival:
 
 ## Next steps
 
-* Try SurvivalTree, GradientBoostingSurvivalAnalysis
+* Expression data EDA
+  * Invetigte the outlier in the plot of PCA1 vs PCA2 and consider removing
+  * Filter by the proportion of the model value prior to fitting
+  * Try WGCNA to 
 
-* Try graph-based extraction of co-expressed genes using kNN + Leiden/Louvain
+* Try alternative models
+  * SurvivalTree
+  * GradientBoostingSurvivalAnalysis
+
+* Re-train using a different seed to check CI estimate stability - 75% feels a little too high for this data set
 
 * Look for an alternative LUAD data set to use for external validation 
+
 
