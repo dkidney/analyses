@@ -36,7 +36,7 @@ Survival:
 
 * Expression data EDA
   * Invetigte the outlier in the plot of PCA1 vs PCA2 and consider removing
-  * Filter by the proportion of the model value prior to fitting
+  * Filter genes using a threshold for the proportion of the modal value 
   * Try WGCNA to 
 
 * Try alternative models
