@@ -1,6 +1,7 @@
 .env
 .venv
-.sav
+*.sav
 data/
 __pycache__/
 .Rproj.user
+.DS_Store

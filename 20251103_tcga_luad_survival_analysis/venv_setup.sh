@@ -13,4 +13,5 @@ $(pyenv root)/versions/${py_version}/bin/python -m venv .venv
 source .venv/bin/activate
 echo $(which python)
 echo $(python --version)
-pip install -U pip ipykernel nbformat pandas matplotlib scipy scikit-learn scikit-survival lifelines statsmodels 
+pip install -U pip ipykernel nbformat pandas matplotlib seaborn pyarrow scikit-learn scikit-survival scipy igraph && pip freeze > requirements.txt
+# pip install -r requirements.txt

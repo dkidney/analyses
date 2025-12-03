@@ -11,3 +11,7 @@ def fit_and_score_features(X, y):
         m.fit(Xj, y)
         scores[j] = m.score(Xj, y)
     return scores
+
+
+def p_to_var(p):
+    return p * (1-p)

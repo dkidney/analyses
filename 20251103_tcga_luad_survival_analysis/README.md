@@ -2,9 +2,17 @@
 
 This analysis was performed using expression, clincal and survival data obtained from the TCGA Lung Adenocarcinoma (LUAD) cohort via [Xena Browser](https://xenabrowser.net/datapages/?cohort=TCGA%20Lung%20Adenocarcinoma%20(LUAD)&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443).
 
-This remains work-in-progress: so far I have fitted regularised Cox proportional hazards models using CoxnetSurvivalAnalysis (sksurv) using PCA-transformed expression features and engineered clinical variables via cross-validation (scikit-learn).
+So far I have fitted regularised Cox proportional hazards models using CoxnetSurvivalAnalysis (sksurv) using feature-engineered variables via cross-validation (scikit-learn).
 
-Since the dataset is very small I have not used an independent holdout set for evaluation, but instead used the average valiation set C-index from cross-valiation as an estimate of model performance. My best model so far has a C-index of ~75%.
+Since the dataset is relatively small (see below) I have not used an independent holdout set for evaluation, but instead used the average valiation set C-index from cross-valiation as an estimate of model performance. 
+
+I have tried two dimension reduction techniques so far, both of which have yielded C-index scores of ~76% which is promising (but provisional):
+
+1. Using PCA transformed expression features within cross-valiation (C-index = 77%)
+
+1. Using a Weighted Gene Co-expression Network analysis approach where eigengenes were derived prior to cross-validation (C-index = 76%)
+
+The second method was much faster to fit and required fewer parameters.
 
 Each step in this analysis is saved in a separate notebook.
 
@@ -34,16 +42,9 @@ Survival:
 
 ## Next steps
 
-* Expression data EDA
-  * Invetigte the outlier in the plot of PCA1 vs PCA2 and consider removing
-  * Filter genes using a threshold for the proportion of the modal value 
-  * Try WGCNA to cluster genes into modules and use eigengenes as features
+* Try alternative models - e.g. SurvivalTree, GradientBoostingSurvivalAnalysis
 
-* Try alternative models
-  * SurvivalTree
-  * GradientBoostingSurvivalAnalysis
-
-* Re-train using a different seed to check CI estimate stability - 75% feels a little too high for this data set
+* Use bootstrap sampling to estimate a confidence interval for the CI-index
 
 * Look for an alternative LUAD data set to use for external validation 
 
