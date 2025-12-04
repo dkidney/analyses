@@ -6,7 +6,7 @@ So far I have fitted regularised Cox proportional hazards models using CoxnetSur
 
 Since the dataset is relatively small (see below) I have not used an independent holdout set for evaluation, but instead used the average valiation set C-index from cross-valiation as an estimate of model performance. 
 
-I have tried two dimension reduction techniques so far, both of which have yielded C-index scores of ~76% which is promising (but provisional):
+I have tried two dimension reduction techniques so far, both of which gave C-index scores of ~75:
 
 1. Using PCA transformed expression features within cross-valiation - C-index = 77% (bootstrap: mean 0.758, 95% CI (0.704, 0.807))
 
