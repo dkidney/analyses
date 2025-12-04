@@ -8,11 +8,11 @@ Since the dataset is relatively small (see below) I have not used an independent
 
 I have tried two dimension reduction techniques so far, both of which have yielded C-index scores of ~76% which is promising (but provisional):
 
-1. Using PCA transformed expression features within cross-valiation (C-index = 77%)
+1. Using PCA transformed expression features within cross-valiation - C-index = 77%, bootstrap 95% CI 0.758 (0.704, 0.807)
 
-1. Using a Weighted Gene Co-expression Network analysis approach where eigengenes were derived prior to cross-validation (C-index = 76%)
+1. Using a Weighted Gene Co-expression Network analysis approach where eigengenes were derived prior to cross-validation - C-index 75%, bootstrap 95% CI 0.751 (0.701, 0.801)
 
-The second method was much faster to fit and required fewer parameters.
+The WGCNA method was ~50x faster to fit, had fewer non-zero coefficients and had similar bootstrap CI results, so this would be my preferred model.
 
 Each step in this analysis is saved in a separate notebook.
 
@@ -43,8 +43,6 @@ Survival:
 ## Next steps
 
 * Try alternative models - e.g. SurvivalTree, GradientBoostingSurvivalAnalysis
-
-* Use bootstrap sampling to estimate a confidence interval for the CI-index
 
 * Look for an alternative LUAD data set to use for external validation 
 
