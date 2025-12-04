@@ -2,6 +2,7 @@
 .venv
 *.sav
 data/
+.cache/
 __pycache__/
 .Rproj.user
 .DS_Store
